@@ -1,0 +1,22 @@
+.characterModal-container__img {
+  object-fit: cover;
+  max-inline-size: 50%;
+  max-height: 22dvh;
+  block-size: auto;
+  object-position: center;
+}
+.rounded {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  padding: 7px;
+}
+.characterModal-container {
+  display: flex;
+  gap: 1rem;
+}
+.character-container__description {
+  display: flex;
+  flex-direction: column;
+  min-width: 6rem;
+  align-items: flex-start;
+}
