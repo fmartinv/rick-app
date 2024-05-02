@@ -1,9 +1,5 @@
 import './modal.css'
-type ModalProps = {
-  isOpen: boolean
-  onClose: () => void
-  children: React.ReactNode
-}
+import { ModalProps } from './modal.types'
 
 const Modal = ({ isOpen, onClose, children }: ModalProps) => {
   if (!isOpen) return null

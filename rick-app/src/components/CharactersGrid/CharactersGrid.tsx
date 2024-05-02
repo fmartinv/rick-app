@@ -5,6 +5,7 @@ import { Character } from '../../models/charater.model'
 import './charactersGrid.css'
 import CharacterModal from '../Modal/CharacterModal/CharacterModal'
 import MoreDetailButton from '../MoreDetailButton/MoreDetailButton'
+import Spinner from '../Spinner/Spinner'
 
 const CharactersGrid: FC = () => {
   const {
@@ -19,9 +20,13 @@ const CharactersGrid: FC = () => {
     setCurrentPage,
     totalPages
   } = useCharactersGridLogic()
-  console.log('render')
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading)
+    return (
+      <div>
+        <Spinner />
+      </div>
+    )
   if (data?.results.length === 0)
     return <div className='no-results'>No results</div>
   if (error) return <div>'Sorry there was an error'</div>

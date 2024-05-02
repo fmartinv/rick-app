@@ -2,16 +2,15 @@ import { Route, Routes } from 'react-router-dom'
 import CharactersGrid from './components/CharactersGrid/CharactersGrid'
 import './App.css'
 // import MainLayout from './views/MainLayout'
-import CharacterDetails from './views/CharacterDeatils'
+import CharacterDetails from './views/CharacterDetails'
 import MainLayout from './views/MainLayout'
 
 function App() {
   return (
     <>
-      {/* <Router> */}
       <Routes>
         <Route
-          path='/undefined'
+          path='/'
           element={
             <MainLayout>
               <CharactersGrid />
@@ -21,7 +20,6 @@ function App() {
 
         <Route path='/characters/:id' element={<CharacterDetails />} />
       </Routes>
-      {/* </Router> */}
     </>
   )
 }

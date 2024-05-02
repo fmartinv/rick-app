@@ -59,6 +59,9 @@ const Pagination: FC<{
           {page}
         </span>
       ))}
+      {currentPage !== lastPage && !isPreviousToLastPage && (
+        <span className={'pagination__item'}>...</span>
+      )}
 
       {currentPage !== lastPage && !isPreviousToLastPage && (
         <span

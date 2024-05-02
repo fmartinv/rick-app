@@ -11,7 +11,6 @@ const CharacterModal = ({
   onClose: () => void
   modalData: Partial<Character> | null
 }) => {
-  console.log(modalData)
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       {modalData && (

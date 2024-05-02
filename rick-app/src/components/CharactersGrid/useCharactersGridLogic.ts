@@ -16,6 +16,7 @@ const useCharactersGridLogic = () => {
     isLoading,
     error
   } = useFetch<ApiResponse | null>(`${CHARACTERS_URL}?page=${currentPage}`)
+
   useEffect(() => {
     setData(modalDataFromApi)
     setTotalPages(modalDataFromApi?.info.pages)

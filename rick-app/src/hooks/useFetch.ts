@@ -29,8 +29,10 @@ export const useFetch = <T>(
   }, [url])
 
   useEffect(() => {
-    fetchData()
-  }, [fetchData, params])
+    if (url) {
+      fetchData()
+    }
+  }, [fetchData, params, url])
 
   return { data, isLoading, error }
 }
