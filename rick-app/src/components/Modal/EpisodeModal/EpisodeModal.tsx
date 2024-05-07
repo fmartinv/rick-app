@@ -35,7 +35,7 @@ const EpisodeModal = ({
               Name:<span>{episodeModalData.name}</span>
             </p>
             <p>
-              Species: <span>{episodeModalData.air_date}</span>
+              Air date: <span>{episodeModalData.air_date}</span>
             </p>
             <p>
               Season:<span>{episodeModalData.episode}</span>

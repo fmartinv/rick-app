@@ -46,7 +46,7 @@ const CharactersGrid: FC = () => {
           }: Character) => (
             <div className='characters-container__item' key={id}>
               <img
-                className='characters-container__img rounded'
+                className='character-container__img rounded'
                 src={image}
                 alt={name}
                 onClick={() =>

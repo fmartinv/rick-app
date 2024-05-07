@@ -22,19 +22,19 @@ const CharacterModal = ({
           />
           <div className='character-container__description'>
             <p>
-              name:<span>{modalData.name}</span>
+              Name:<span>{modalData.name}</span>
             </p>
             <p>
-              species: <span>{modalData.species}</span>
+              Specie: <span>{modalData.species}</span>
             </p>
             <p>
-              status:<span>{modalData.status}</span>
+              Status:<span>{modalData.status}</span>
             </p>
             <p>
-              gender:<span>{modalData.gender}</span>
+              Gender:<span>{modalData.gender}</span>
             </p>
             <p>
-              loaction:<span>{modalData?.location?.name}</span>
+              Location:<span>{modalData?.location?.name}</span>
             </p>
           </div>
         </div>

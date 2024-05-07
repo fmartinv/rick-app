@@ -16,7 +16,7 @@
 }
 .character-details-grid-items__episodes {
   display: flex;
-  max-width: 700px;
+  min-width: 300px;
   flex-wrap: wrap;
 }
 .character-details-grid-items__episodes-item {
@@ -29,4 +29,34 @@
   margin: 0.5em;
   font-size: small;
   border-radius: 0.5em;
+  cursor: pointer;
+}
+.character-details-grid-items__container span {
+  color: #03bfcb;
+  font-size: small;
+  margin-left: 0.5em;
+  font-size: 1rem;
+}
+.character-container__img {
+  object-fit: cover;
+  max-inline-size: 86%;
+  block-size: auto;
+  object-position: center;
+}
+.character-details-grid__title {
+  display: flex;
+  text-align: flex-start;
+  margin-left: 1rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+  .character-details-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .character-details-grid-items__container {
+    gap: 0.5rem;
+  }
+  .character-container__img {
+    max-width: 60%;
+  }
 }

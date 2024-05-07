@@ -11,7 +11,7 @@ const CharacterDetailGrid: FC<CharacterDetailProps> = ({ id }): JSX.Element => {
     useUtilLogic()
   const { dataFromUseFetch, isLoading, episodes, formattedDate } =
     CharacterDetailLogic(id)
-  const { name, image, species, status, type, gender, location } =
+  const { name, image, species, status, gender, location, origin } =
     dataFromUseFetch || {}
 
   if (isLoading)
@@ -26,7 +26,7 @@ const CharacterDetailGrid: FC<CharacterDetailProps> = ({ id }): JSX.Element => {
       <div className='character-details-grid'>
         <div className='character-details-grid__item'>
           <img
-            className='characters-container__img rounded'
+            className='character-container__img  rounded'
             src={image}
             alt={name}
           />
@@ -37,19 +37,43 @@ const CharacterDetailGrid: FC<CharacterDetailProps> = ({ id }): JSX.Element => {
               Name: <span>{name}</span>
             </p>
           </div>
-          <div className='character-details-grid__item'>Specie: {species}</div>
-          <div className='character-details-grid__item'>Status: {status}</div>
-          <div className='character-details-grid__item'>Type: {type}</div>
-          <div className='character-details-grid__item'>Gender: {gender}</div>
           <div className='character-details-grid__item'>
-            Location: {location?.name}
+            <p>
+              Specie:<span>{species}</span>
+            </p>
           </div>
           <div className='character-details-grid__item'>
-            Created: {formattedDate}
+            <p>
+              Status: <span>{status}</span>
+            </p>
+          </div>
+          <div className='character-details-grid__item'>
+            <p>
+              Origin:<span>{origin?.name}</span>
+            </p>
+          </div>
+          <div className='character-details-grid__item'>
+            <p>
+              Gender: <span>{gender}</span>
+            </p>
+          </div>
+          <div className='character-details-grid__item'>
+            <p>
+              Location: <span>{location?.name}</span>
+            </p>
+          </div>
+          <div className='character-details-grid__item'>
+            <p>
+              Created: <span>{formattedDate}</span>
+            </p>
           </div>
         </div>
       </div>
-      <h2>Episodes</h2>
+
+      <div className='character-details-grid__title'>
+        <h2>Episodes</h2>
+      </div>
+
       <div className='character-details-grid-items__episodes'>
         {episodes &&
           episodes?.map(el => (

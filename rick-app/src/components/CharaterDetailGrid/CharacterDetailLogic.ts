@@ -33,7 +33,8 @@ const CharacterDetailLogic = (id: string) => {
   const createdDate = dataFromUseFetch?.created
   let formattedDate = 'N/A'
   if (createdDate) {
-    formattedDate = formatDate(createdDate)
+    const format = formatDate(createdDate)
+    formattedDate = format.split(',')[0]
   }
 
   return {

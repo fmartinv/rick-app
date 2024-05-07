@@ -1,17 +1,18 @@
 .characterModal-container__img {
   object-fit: cover;
-  max-inline-size: 50%;
-  max-height: 22dvh;
+  max-inline-size: 46%;
   block-size: auto;
   object-position: center;
 }
 .rounded {
-  border: 1px solid #03bfcb;
+  border: 3px solid #03bfcb;
   border-radius: 50%;
   padding: 7px;
 }
 .characterModal-container {
   display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
   gap: 1rem;
 }
 .character-container__description {
@@ -19,4 +20,11 @@
   flex-direction: column;
   min-width: 6rem;
   align-items: flex-start;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+  .characterModal-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
