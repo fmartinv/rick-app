@@ -12,7 +12,7 @@ const CharacterModal = ({
   modalData: Partial<Character> | null
 }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} onClose={onClose} data-testid='character-modal'>
       {modalData && (
         <div className='characterModal-container'>
           <img

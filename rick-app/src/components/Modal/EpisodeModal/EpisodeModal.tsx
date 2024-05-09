@@ -26,7 +26,7 @@ const EpisodeModal = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       {episodeModalData && (
-        <div className='EpisodeModal-container'>
+        <div className='EpisodeModal-container' data-testid='episode-modal'>
           <div className='character-container__description'>
             <p>
               Episode number:<span>{episodeNumber}</span>

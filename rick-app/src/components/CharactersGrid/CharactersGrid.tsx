@@ -7,6 +7,11 @@ import CharacterModal from '../Modal/CharacterModal/CharacterModal'
 import MoreDetailButton from '../MoreDetailButton/MoreDetailButton'
 import Spinner from '../Spinner/Spinner'
 
+/**
+ * Renders a grid of characters with pagination and a modal for more details.
+ *
+ * @return {JSX.Element} The JSX element representing the characters grid.
+ */
 const CharactersGrid: FC = () => {
   const {
     currentPage,
@@ -33,7 +38,7 @@ const CharactersGrid: FC = () => {
 
   return (
     <>
-      <div className='character-container'>
+      <div className='character-container' data-testid='characters-grid'>
         {data?.results.map(
           ({
             id,
