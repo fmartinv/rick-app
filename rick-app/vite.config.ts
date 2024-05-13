@@ -10,7 +10,7 @@ export default defineConfig({
     setupFiles: './setupTest.ts',
     environment: 'jsdom',
     coverage: {
-      reporter: ['text', 'json', 'html']
+      reporter: ['text']
     }
   }
 })
